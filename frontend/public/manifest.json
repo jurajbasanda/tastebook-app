@@ -1,0 +1,20 @@
+{
+  "short_name": "Tastebook",
+  "name": "Tastebook website about recipes",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo258.png",
+      "type": "image/png",
+      "sizes": "258x258"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

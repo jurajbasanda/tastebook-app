@@ -1,0 +1,99 @@
+@use './abstracts' as *;
+
+.myaccount-page {
+	background-color: white;
+	min-height: 60vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.profile-group,.your-recipes-group{display: flex;
+				flex-direction: column;}
+.profile-table {
+	thead{background-color: $dark;
+		th,td{color: white;
+		border:0;
+		padding: 0.2rem;
+		text-align: left;}}
+	tbody {
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+
+		}
+		th,
+		td {
+			border:0;
+			padding: 1rem;
+			text-align: left;
+		}
+	}
+}
+.recipe-table{
+	thead{background-color: $dark;
+		th,td{color: white;
+		border:0;
+		padding: 0.5rem;
+		text-align: left;}}
+	tbody {
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+
+		}
+		th,
+		td {
+			border:0;
+			padding: 0.1rem;
+			text-align: left;
+		}
+	}
+
+}
+.edit-btn-group{
+	padding-top: 1rem;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.edit-btn{
+	background-color: $red;
+	color: white;
+	padding:0.5rem;
+	border: none;
+}
+///----------------------------------------935px---------------------------------
+@media screen and (max-width:935px){
+.myaccount-page {
+	flex-direction: column;
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+.profile-group{margin-bottom: 5rem;}}
+///----------------------------------------635px---------------------------------
+@media screen and (max-width:635px){
+	.myaccount-page {
+		padding-left: 0.2rem;
+		padding-right: 0.2em;
+	}
+	.profile-table {
+		thead{background-color: $dark;
+			th,td{color: white;
+			border:0;
+			text-align: left;}}
+		tbody {
+			tr:nth-child(even) {
+				background-color: #f2f2f2;
+	
+			}
+			th,
+			td {
+				border:0;
+				padding: 0.1rem;
+				text-align: left;
+			}
+		}
+	}
+}

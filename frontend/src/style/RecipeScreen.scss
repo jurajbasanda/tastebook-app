@@ -1,0 +1,130 @@
+@use './abstracts' as *;
+
+.recipepage {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.1fr 1fr;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 1rem 12rem 1rem 12rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	min-height: 50vh;
+	background-color: #fff;
+	h1 {
+		font-size: 1.9rem;
+		margin-bottom: 1rem;
+	}
+	h2 {
+		margin-bottom: 1rem;
+	}
+	h3 {
+		font-size: 1.2rem;
+		font-style: italic;
+		text-decoration: underline;
+	}
+}
+.recipepage-title {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	ul {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+	}
+	li {
+		border-right: 1px solid $grey;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		span {
+			margin-left: 0.5rem;
+		}
+	}
+	img {
+		width: 1.8rem;
+	}
+}
+.dsc-ingredients-group,
+.dsc-method-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
+	li {
+		margin: 1rem 0 0 0;
+	}
+	ul {
+		list-style: outside;
+		//line-height: 1.5rem;
+	}
+	ol {
+		list-style: none;
+		line-height: 1.6rem;
+		margin-left: 4.4rem;
+
+		li {
+			counter-increment: tabular-numbers;
+			font-variant: tabular-numbers;
+		}
+
+		li:before {
+			content: 'Step ' counter(tabular-numbers) '. ';
+			color: $grey;
+			margin: -4.7rem;
+			margin-right: 0.5rem;
+			padding: 0.3rem;
+			font-weight: bold;
+			border-right: 1px solid $grey;
+			// transform: rotate(-50deg);
+			// border-radius: 50%;
+			// text-align: center;
+			// box-shadow: 1px 1px 1px 1px #999;
+		}
+	}
+}
+.dsc-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.dsc-imgs-group {
+	display: flex;
+	img {
+		align-self: center;
+		width: 35rem;
+	}
+}
+@media screen and (max-width: 1150px) {
+	//----------------------------------------------------1150px--------------------
+	.recipepage {
+		padding: 1rem 1.5rem 1rem 1.5rem;
+	}
+	.dsc-group {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.dsc-lists {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 600px) {
+	//-------------------------------------------------------600px--------------------
+	
+	.dsc-imgs-group {
+		img {
+			width: 20rem;
+		}
+	}
+	.dsc-lists {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 570px) {
+	//------------------------------------570px--------------------
+}

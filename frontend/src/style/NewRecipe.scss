@@ -1,0 +1,42 @@
+@use './abstracts' as *;
+
+.new-recipe {
+	display: none;
+	padding: 1rem;
+	div {
+		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+	}
+}
+.uploadPhoto-group {
+	display: flex;
+	flex-direction: column;
+}
+.open-component {
+	display: flex;
+	flex-direction: column;
+	background-color: $light-grey;
+}
+.chceck-box-group {
+	div {
+		display: flex;
+		flex-direction: row;
+		input {
+			margin-top: 0.1rem;
+			margin-left: 0.3rem;
+		}
+	}
+}
+.photo-guideline {
+	ul {
+		li {
+			.fa-check {
+				color: rgb(30, 189, 30);
+			}
+			.fa-times{
+				color: red;
+			}
+		}
+	}
+}
